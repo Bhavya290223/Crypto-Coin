@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "ecoin_backend": {
+      "main": "src/ecoin_backend/main.mo",
+      "type": "motoko"
+    },
+    "ecoin_frontend": {
+      "dependencies": [
+        "ecoin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ecoin_frontend/src/index.html"
+      },
+      "source": [
+        "src/ecoin_frontend/assets",
+        "dist/ecoin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
